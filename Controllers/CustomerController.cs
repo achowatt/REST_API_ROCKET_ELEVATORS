@@ -21,8 +21,8 @@ namespace RocketElevatorApi.Controllers
         }
 
         // To see all customer                                          https://localhost:5001/api/customer
-        // GET: api/customer           
-        [HttpGet]
+        // GET: api/customer/all           
+        [HttpGet("all")]
         public IEnumerable<Customer> GetCustomers()
         {
             IQueryable<Customer> Customers =

@@ -19,9 +19,9 @@ namespace RocketElevatorApi.Controllers
 
         }
 
-        // To get full list of leads                                    https://localhost:5001/api/lead
-        // GET: api/lead           
-        [HttpGet]
+        // To get full list of leads                                    https://localhost:5001/api/lead/all
+        // GET: api/lead/all           
+        [HttpGet("all")]
         public IEnumerable<Lead> GetLeads()
         {
             IQueryable<Lead> Leads =
