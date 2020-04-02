@@ -18,9 +18,9 @@ namespace RocketElevatorApi.Controllers
             _context = context;
         }
 
-        // To see all the batteries availables                  https://localhost:5001/api/battery
-        // GET: api/battery
-        [HttpGet]
+        // To see all the batteries availables                  https://localhost:5001/api/battery/all
+        // GET: api/battery/all
+        [HttpGet("all")]
         public IEnumerable<Battery> GetBattery()
         {
             return _context.Batteries;

@@ -28,8 +28,8 @@ namespace RocketElevatorApi.Controllers
             return _context.Elevators.ToList ();
         }
 
-        // Retriving Status of All the Elevators not active             https://localhost:5001/api/elevator
-        // GET: api/elevator            
+        // Retriving Status of All the Elevators not active             https://localhost:5001/api/elevator/notinoperation
+        // GET: api/elevator/notinoperation            
         [HttpGet("notinoperation")]
         public IEnumerable<Elevator> GetElevators()
         {
