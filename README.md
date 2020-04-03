@@ -106,10 +106,20 @@ To check the change, go to the 5 question.
 
 **GET:** https://rocketapi.azurewebsites.net/api/lead/notcustomers - **SEND**
 
-# <bYou can also use the following options:</b>
+# <b>You can also use the following options:</b>
 
-* https://rocketapi.azurewebsites.net/api/battery/all - To get all the batteries availables
-* https://rocketapi.azurewebsites.net/api/battery/active - To get all the active batteries
-* https://rocketapi.azurewebsites.net/api/battery/inactive - To get all the inactive batteries 
-* 
+* https://rocketapi.azurewebsites.net/api/battery/all - To retrieve all the batteries availables
+* https://rocketapi.azurewebsites.net/api/battery/active - To retrieve all the active batteries
+* https://rocketapi.azurewebsites.net/api/battery/inactive - To retrieve all the inactive batteries 
+* https://rocketapi.azurewebsites.net/api/column/all - To retrieve all the columns
+* https://rocketapi.azurewebsites.net/api/column/active - To retrieve the active columns
+* https://rocketapi.azurewebsites.net/api/column/inactive - To retrieve the inactive columns
+* https://rocketapi.azurewebsites.net/api/building/all - To retrieve all the buildings
+* https://rocketapi.azurewebsites.net/api/building/69 - To retrieve an specific building 
+* https://rocketapi.azurewebsites.net/api/customer/all - To retrieve all the customers
+* https://rocketapi.azurewebsites.net/api/lead/all - To retrieve all the leads
+
+
+
+
 
