@@ -94,6 +94,16 @@ Response:
 
 To check the change, go to the 5 question.
 
-7. 
+7. Retrieving a list of **Elevators** that are not in operation at the time of the request:
+
+**GET:** https://rocketapi.azurewebsites.net/api/elevator/notinoperation
+
+8. Retrieving a list of **Buildings** that contain at least one battery, column or elevator requiring intervention:
+
+**GET:** https://rocketapi.azurewebsites.net/api/building/intervention
+
+9. Retrieving a list of **Leads** created in the last 30 days who have not yet become customers:
+
+**GET:** https://rocketapi.azurewebsites.net/api/lead/notcustomers
 
 
