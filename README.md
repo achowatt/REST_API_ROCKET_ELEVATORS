@@ -4,9 +4,6 @@
 
 **Week 8 - Offer Services on the Internet** 
 
-
-This site was built using [GitHub Pages](https://pages.github.com/).
-
 **Team:** 
 
 >1. Ukeme Ekpenyong (Team Leader)
@@ -15,3 +12,10 @@ This site was built using [GitHub Pages](https://pages.github.com/).
 >4. David Hunter
 >5. Jorge Chavarriaga
 
+This site was built using [GitHub Pages](https://pages.github.com/).
+
+*To answer the 9 questions with Postman:*
+
+1. Retrieving the current status of a specific Battery:
+
+**GET** https://rocketapi.azurewebsites.net/api/battery/69 
