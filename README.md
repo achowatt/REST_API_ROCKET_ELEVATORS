@@ -17,7 +17,7 @@
 
 1. Retrieving the current status of a specific **Battery**:
 
-**GET:** https://rocketapi.azurewebsites.net/api/battery/69 - *(69 the battery id)*
+**GET:** https://rocketapi.azurewebsites.net/api/battery/69 - *(69 the battery id)* - **SEND**
 
 2. Changing the status of a specific **Battery**:
 
@@ -33,7 +33,7 @@ Select: >Body >raw >JSON
         "status": "active"
     }
 
-To change the status: "status": "active" or "inactive"  and pres **SEND**
+To change the status: "status": "active" or "inactive"  and press **SEND**
 
 Response:
 
@@ -43,7 +43,7 @@ To check the change, go to the 1 question.
 
 3. Retrieving the current status of a specific **Column**:
 
-**GET:** https://rocketapi.azurewebsites.net/api/column/69 - *(69 the battery id)*
+**GET:** https://rocketapi.azurewebsites.net/api/column/69 - *(69 the battery id)* - **SEND**
 
 
 4. Changing the status of a specific **Column**:
@@ -62,7 +62,7 @@ Select: >Body >raw >JSON
         "battery_id": 24
     }
 
-To change the status: "status": "active" or "inactive"  and pres **SEND**
+To change the status: "status": "active" or "inactive"  and press **SEND**
 
 Response:
 
@@ -72,11 +72,11 @@ To check the change, go to the 3 question.
 
 5. Retrieving the current status of a specific **Elevator**:
 
-**GET:** https://rocketapi.azurewebsites.net/api/elevator/69 - *(69 the elevator id)*
+**GET:** https://rocketapi.azurewebsites.net/api/elevator/69 - *(69 the elevator id)* - **SEND**
 
 6. Changing the status of a specific **Elevator**:
 
-**PUT:** https://rocketapi.azurewebsites.net/api/elevator/69 - *(69 the elevator id)*
+**PUT:** https://rocketapi.azurewebsites.net/api/elevator/69 - *(69 the elevator id)* 
 
 Select: >Body >raw >JSON
 
@@ -86,7 +86,7 @@ Select: >Body >raw >JSON
     "status": "active"
   }
 
-To change the status: "status": "active" or "inactive"  and pres **SEND**
+To change the status: "status": "active" or "inactive"  and press **SEND**
 
 Response:
 
@@ -96,14 +96,14 @@ To check the change, go to the 5 question.
 
 7. Retrieving a list of **Elevators** that are not in operation at the time of the request:
 
-**GET:** https://rocketapi.azurewebsites.net/api/elevator/notinoperation
+**GET:** https://rocketapi.azurewebsites.net/api/elevator/notinoperation - **SEND**
 
 8. Retrieving a list of **Buildings** that contain at least one battery, column or elevator requiring intervention:
 
-**GET:** https://rocketapi.azurewebsites.net/api/building/intervention
+**GET:** https://rocketapi.azurewebsites.net/api/building/intervention - **SEND**
 
 9. Retrieving a list of **Leads** created in the last 30 days who have not yet become customers:
 
-**GET:** https://rocketapi.azurewebsites.net/api/lead/notcustomers
+**GET:** https://rocketapi.azurewebsites.net/api/lead/notcustomers - **SEND**
 
 
