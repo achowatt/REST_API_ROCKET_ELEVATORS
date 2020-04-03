@@ -15,11 +15,11 @@
 
 *To answer the 9 questions with Postman:*
 
-1. [Retrieving the current status of a specific Battery:](https://rocketapi.azurewebsites.net/api/battery/69)
+1. [Retrieving the current status of a specific **Battery**:](https://rocketapi.azurewebsites.net/api/battery/69)
 
 **GET:** https://rocketapi.azurewebsites.net/api/battery/69 - *(69 the battery id)*
 
-2. Changing the status of a specific Battery:
+2. Changing the status of a specific **Battery**:
 
 **PUT:** https://rocketapi.azurewebsites.net/api/battery/69 - *(69 the battery id)*
 
@@ -32,5 +32,18 @@ Select: >Body >raw >JSON
         "battery_type": "Corporate",
         "status": "active"
     }
+
+To change the status: "status": "active" or "inactive"  and pres **SEND**
+
+Response:
+
+**The status of the Battery Id: 69 as been changed satisfactorily to: inactive**
+
+To check the change, go to the first question.
+
+3. [Retrieving the current status of a specific **Column**:](https://rocketapi.azurewebsites.net/api/column/69)
+
+**GET:** https://rocketapi.azurewebsites.net/api/column/69 - *(69 the battery id)*
+
 
 
