@@ -36,7 +36,7 @@ To change the status: "status": "active" or "inactive"  and press **SEND**
 
 Response:
 
-**The status of the Battery Id: 69 has been changed satisfactorily to: inactive**
+**The status of the Battery Id: 69 has been changed to: inactive**
 To review changes, refer to the first step.
 
 3. Retrieving the current status of a specific **Column**:
@@ -63,7 +63,7 @@ To change the status: "status": "active" or "inactive"  and press **SEND**
 
 Response:
 
-**The status of the Column Id: 69 has been changed satisfactorily to: inactive**
+**The status of the Column Id: 69 has been changed to: inactive**
 To review changes, refer to the third step.
 
 5. Retrieving the current status of a specific **Elevator**:
@@ -86,7 +86,7 @@ To change the status: "status": "active" or "inactive"  and press **SEND**
 
 Response:
 
-**The status of the Elevator Id: 69 has been changed satisfactorily to: inactive**
+**The status of the Elevator Id: 69 has been changed to: inactive**
 To review changes, refer to the fifth step.
 
 7. Retrieving a list of **Elevators** that are not in operation at the time of the request:
