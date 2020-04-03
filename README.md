@@ -17,4 +17,20 @@
 
 1. [Retrieving the current status of a specific Battery:](https://rocketapi.azurewebsites.net/api/battery/69)
 
-**GET:** https://rocketapi.azurewebsites.net/api/battery/69 
+**GET:** https://rocketapi.azurewebsites.net/api/battery/69 - *(69 the battery id)*
+
+2. Changing the status of a specific Battery:
+
+**PUT:** https://rocketapi.azurewebsites.net/api/battery/69 - *(69 the battery id)*
+
+Select: >Body >raw >JSON
+
+    {
+        "id": 69,
+        "building_id": 69,
+        "employee_id": 2,
+        "battery_type": "Corporate",
+        "status": "active"
+    }
+
+
