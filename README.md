@@ -12,10 +12,9 @@
 >4. David Hunter
 >5. Jorge Chavarriaga
 
-This site was built using [GitHub Pages](https://pages.github.com/).
 
 *To answer the 9 questions with Postman:*
 
-1. Retrieving the current status of a specific Battery:
+1. [Retrieving the current status of a specific Battery:](https://rocketapi.azurewebsites.net/api/battery/69)
 
-**GET** https://rocketapi.azurewebsites.net/api/battery/69 
+**GET: ** https://rocketapi.azurewebsites.net/api/battery/69 
