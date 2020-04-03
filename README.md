@@ -15,7 +15,8 @@
 
 
 
-*To answer the 9 questions with [Postman:](https://www.getpostman.com/collections/a5cd3bfab68ca5d11069)*
+*To answer the 9 questions with [*Postman:](https://www.getpostman.com/collections/a5cd3bfab68ca5d11069)*
+Click in Postman if you want to import our collection in your Postman
 
 1. Retrieving the current status of a specific **Battery**:
 
