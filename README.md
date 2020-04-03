@@ -106,4 +106,10 @@ To check the change, go to the 5 question.
 
 **GET:** https://rocketapi.azurewebsites.net/api/lead/notcustomers - **SEND**
 
+# <bYou can also use the following options:</b>
+
+* https://rocketapi.azurewebsites.net/api/battery/all - To get all the batteries availables
+* https://rocketapi.azurewebsites.net/api/battery/active - To get all the active batteries
+* https://rocketapi.azurewebsites.net/api/battery/inactive - To get all the inactive batteries 
+* 
 
