@@ -17,4 +17,4 @@
 
 1. [Retrieving the current status of a specific Battery:](https://rocketapi.azurewebsites.net/api/battery/69)
 
-**GET: ** https://rocketapi.azurewebsites.net/api/battery/69 
+**GET:** https://rocketapi.azurewebsites.net/api/battery/69 
