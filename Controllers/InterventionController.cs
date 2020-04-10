@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGeneration.Design;
 using RocketElevatorApi.Models;
+using System;
 
 namespace RocketElevatorApi.Controllers
 {
@@ -18,7 +19,7 @@ namespace RocketElevatorApi.Controllers
             _context = context;
         }
 
-        // To see all the interventions                            https://localhost:5001/api/intervention/all
+        // To see all the interventions                            https://localhost:5000/api/intervention/all
         // GET: api/intervention/all
         [HttpGet("all")]
         public IEnumerable<Intervention> GetIntervention()
@@ -26,7 +27,7 @@ namespace RocketElevatorApi.Controllers
             return _context.Interventions;
         }
 
-        // To get an intervention by id                              https://localhost:5001/api/internvetion/2 
+        // To get an intervention by id                               https://localhost:5000/api/internvetion/2 
         // GET: api/battery/(id)  
         [HttpGet("{id}")]
         public List<Intervention> FindInterventionByID(long ID)
@@ -35,7 +36,7 @@ namespace RocketElevatorApi.Controllers
             return intervention;
         }
 
-        //GET: api/intervention/pending                         https://localhost:5001/api/intervention/pending
+        //GET: api/intervention/pending                               https://localhost:5000/api/intervention/pending
         //Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.
         [HttpGet("{pending}")]
         public List<Intervention> getPending(string pending)
@@ -44,10 +45,8 @@ namespace RocketElevatorApi.Controllers
             return intervention;
         }
 
-        // PUT: api/intervention/(id)                                 https://localhost:5001/api/intervention/2
-        //Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
-        //Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
-
+        // PUT: api/intervention/(id)                                  https://localhost:5000/api/intervention/2
+        //Change value of any parameters
         [HttpPut("{id}")]
         public async Task<ActionResult<Intervention>> putIntervention(long ID, Intervention intervention)
         {
@@ -74,6 +73,54 @@ namespace RocketElevatorApi.Controllers
             return Content("The status of the intenvention ID: " + intervention.id +
             " has been changed to: " + intervention.status + ". The start date is: "
              + intervention.start_date + " and the end date is: " + intervention.end_date);
+        }
+
+        // PUT: api/interventions/{id}/inProgress                      https://localhost:5000/api/intervention/2/inProgress 
+        //Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
+        [HttpPut("{id}/inProgress")]
+        public async Task<ActionResult<Intervention>> UpdateIntervention([FromRoute] long id)
+        {
+            var myIntervention = await this._context.Interventions.FindAsync(id);
+            if (myIntervention == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                myIntervention.status = "pending";
+                myIntervention.status = "InProgress";
+                myIntervention.start_date = System.DateTime.Now;
+            }
+            this._context.Interventions.Update(myIntervention);
+            await this._context.SaveChangesAsync();
+
+            return Content("The status of the intenvention ID: " + myIntervention.id +
+            " has been changed to: " + myIntervention.status + ". The start date is: "
+             + myIntervention.start_date + ".");
+        }
+
+        // PUT: api/interventions/{id}/completed                  https://localhost:5000/api/intervention/2/completed
+        //Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
+        [HttpPut("{id}/completed")]
+        public async Task<ActionResult<Intervention>> InterventionCompleted([FromRoute] long id)
+        {
+            var myIntervention = await this._context.Interventions.FindAsync(id);
+            if (myIntervention == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                myIntervention.result = "Successful";
+                myIntervention.status = "Completed";
+                myIntervention.end_date = System.DateTime.Now;
+            }
+            this._context.Interventions.Update(myIntervention);
+            await this._context.SaveChangesAsync();
+
+            return Content("The status of the intenvention ID: " + myIntervention.id +
+            " has been changed to: " + myIntervention.status + ". The end date is: "
+             + myIntervention.end_date + ".");
         }
     }
 }
