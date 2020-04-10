@@ -34,14 +34,14 @@ namespace RocketElevatorApi.Controllers
         // Retrieving a list of Leads created in the last 30 days who have not yet become customers
         //                                                              https://localhost:5001/api/lead/notcustomers
         // GET: api/Lead         
-         [HttpGet("notcustomers")]
-         public IEnumerable<Lead> GetLead()
-         {
+        [HttpGet("notcustomers")]
+        public IEnumerable<Lead> GetLead()
+        {
             IQueryable<Lead> notCustomers =
             from leaad in _context.Leads
-            where leaad.created_at  >= System.DateTime.Now.AddDays(-30)
+            where leaad.created_at >= System.DateTime.Now.AddDays(-30)
             select leaad;
             return notCustomers.ToList();
-         }               
+        }
     }
 }
