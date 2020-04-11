@@ -1,6 +1,42 @@
 # <b>A .NET Core API deployed on Microsoft Azure</b>
 # <b>Rocket Elevator Restful Api</b>
 
+**Week 9 - Consolidation ** by Anna Chowattanakul
+
+Here are the commands for the RESTFUL API:
+1. To see all the interventions                               https://localhost:5001/api/intervention/all
+   GET: api/intervention/all                               
+   https://annachowattanakulapi.azurewebsites.net/api/intervention/all
+
+
+
+2. To get an intervention by id                               https://localhost:5001/api/internvetion/2 
+   GET: api/intervention/(id)  
+   https://annachowattanakulapi.azurewebsites.net/api/intervention/2
+
+
+3. Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.
+   GET: api/intervention/pending                               https://localhost:5001/api/intervention/pending
+   https://annachowattanakulapi.azurewebsites.net/api/intervention/pending
+ 
+ 
+4. Change value of any parameters                              https://localhost:5001/api/intervention/2
+   PUT: api/intervention/(id)                                  
+   https://annachowattanakulapi.azurewebsites.net/api/intervention/2
+
+
+5. Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
+   PUT: api/intervention/(id)/inProgress                       https://localhost:5001/api/intervention/2/inProgress 
+   https://annachowattanakulapi.azurewebsites.net/api/intervention/2/inProgress
+ 
+ 
+6. Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
+   PUT: api/intervention/{id}/completed                        https://localhost:5001/api/intervention/2/completed
+   https://annachowattanakulapi.azurewebsites.net/api/intervention/2/completed
+
+
+
+
 **Week 8 - Offer Services on the Internet** 
 
 **Team:** 
