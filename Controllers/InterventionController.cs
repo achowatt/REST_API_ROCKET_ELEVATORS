@@ -19,7 +19,7 @@ namespace RocketElevatorApi.Controllers
             _context = context;
         }
 
-        // To see all the interventions                            https://localhost:5000/api/intervention/all
+        // To see all the interventions                            https://localhost:5001/api/intervention/all
         // GET: api/intervention/all
         [HttpGet("all")]
         public IEnumerable<Intervention> GetIntervention()
@@ -27,8 +27,8 @@ namespace RocketElevatorApi.Controllers
             return _context.Interventions;
         }
 
-        // To get an intervention by id                               https://localhost:5000/api/internvetion/2 
-        // GET: api/battery/(id)  
+        // To get an intervention by id                               https://localhost:5001/api/internvetion/2 
+        // GET: api/intervention/(id)  
         [HttpGet("{id}")]
         public List<Intervention> FindInterventionByID(long ID)
         {
@@ -36,16 +36,16 @@ namespace RocketElevatorApi.Controllers
             return intervention;
         }
 
-        //GET: api/intervention/pending                               https://localhost:5000/api/intervention/pending
+        //GET: api/intervention/pending                               https://localhost:5001/api/intervention/pending
         //Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.
-        [HttpGet("{pending}")]
+        [HttpGet("pending")]
         public List<Intervention> getPending(string pending)
         {
             var intervention = _context.Interventions.Where(intervention => intervention.status == "pending" && intervention.start_date == null).ToList();
             return intervention;
         }
 
-        // PUT: api/intervention/(id)                                  https://localhost:5000/api/intervention/2
+        // PUT: api/intervention/(id)                                  https://localhost:5001/api/intervention/2
         //Change value of any parameters
         [HttpPut("{id}")]
         public async Task<ActionResult<Intervention>> putIntervention(long ID, Intervention intervention)
@@ -75,7 +75,7 @@ namespace RocketElevatorApi.Controllers
              + intervention.start_date + " and the end date is: " + intervention.end_date);
         }
 
-        // PUT: api/interventions/{id}/inProgress                      https://localhost:5000/api/intervention/2/inProgress 
+        // PUT: api/intervention/{id}/inProgress                      https://localhost:5001/api/intervention/2/inProgress 
         //Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp).
         [HttpPut("{id}/inProgress")]
         public async Task<ActionResult<Intervention>> UpdateIntervention([FromRoute] long id)
@@ -99,7 +99,7 @@ namespace RocketElevatorApi.Controllers
              + myIntervention.start_date + ".");
         }
 
-        // PUT: api/interventions/{id}/completed                  https://localhost:5000/api/intervention/2/completed
+        // PUT: api/intervention/{id}/completed                  https://localhost:5001/api/intervention/2/completed
         //Change the status of the request for action to "Completed" and add an end date and time (Timestamp).
         [HttpPut("{id}/completed")]
         public async Task<ActionResult<Intervention>> InterventionCompleted([FromRoute] long id)
