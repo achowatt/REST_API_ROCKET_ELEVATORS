@@ -27,7 +27,7 @@ namespace RocketElevatorApi.Controllers
             return _context.Interventions;
         }
 
-        // To get an intervention by id                               https://localhost:5001/api/internvetion/2 
+        // To get an intervention by id                               https://localhost:5001/api/intervention/2 
         // GET: api/intervention/(id)  
         [HttpGet("{id}")]
         public List<Intervention> FindInterventionByID(long ID)
