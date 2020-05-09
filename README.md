@@ -1,8 +1,8 @@
 # <b>A .NET Core API deployed on Microsoft Azure</b>
 # <b>Rocket Elevator Restful Api</b>
 
-**Week 13 - Mobile App ** by Anna Chowattanakul
-Here are the commands for the RESTFUL API
+<b>**Week 13 - Mobile App ** by Anna Chowattanakul</b>
+<b>Here are the commands for the RESTFUL API</b>
 
 1. To see a list of active elevators
    https://annachowattanakulapi.azurewebsites.net/api/elevator/active
