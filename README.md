@@ -1,6 +1,34 @@
 # <b>A .NET Core API deployed on Microsoft Azure</b>
 # <b>Rocket Elevator Restful Api</b>
 
+**Week 13 - Mobile App ** by Anna Chowattanakul
+Here are the commands for the RESTFUL API
+
+1. To see a list of active elevators
+   https://annachowattanakulapi.azurewebsites.net/api/elevator/active
+
+2. To see a list of inactive elevators
+   https://annachowattanakulapi.azurewebsites.net/api/elevator/notinoperation
+
+3. To change the status of elevator to active
+   https://localhost:5001/api/elevator/2/active
+   https://annachowattanakulapi.azurewebsites.net/api/elevator/2/active
+
+4. To change the status of elevator to inactive
+   https://localhost:5001/api/elevator/2/inactive
+   https://annachowattanakulapi.azurewebsites.net/api/elevator/2/inactive
+   
+5. To verify employee's email (for login)
+   https://localhost:5001/api/employee/[email]
+   https://annachowattanakulapi.azurewebsites.net/api/employee/[email]
+  
+   The link gives you a 200 or 404 status   
+   example: https://annachowattanakulapi.azurewebsites.net/api/employee/test@test.ca
+   
+6. To see the list of all employees
+   https://annachowattanakulapi.azurewebsites.net/api/employee/all
+
+
 **Week 9 - Consolidation ** by Anna Chowattanakul
 
 Here are the commands for the RESTFUL API:
